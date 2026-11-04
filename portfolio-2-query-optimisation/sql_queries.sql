@@ -1,1 +1,6 @@
-
+-- ============================================
+-- CAMPUSCART E-COMMERCE MANAGEMENT SYSTEM
+-- PORTFOLIO 2: QUERY PROCESSING AND OPTIMISATION
+-- File: sql_queries.sql
+-- Database: campuscart_db
+-- ============================================
