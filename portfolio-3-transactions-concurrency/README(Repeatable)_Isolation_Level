@@ -1,0 +1,13 @@
+REPEATABLE READ Isolation Level
+
+Objective: To demonstrate how PostgreSQL maintains a consistent snapshot throughout a transaction.
+
+Scenario: Two PostgreSQL sessions accessed the same CampusCart product record.
+
+Session A: Started a REPEATABLE READ transaction and retrieved the product stock as 24.
+
+Session B: Increased the product stock by one unit and committed the change. The updated stock became 25.
+
+Observation: When Session A executed the SELECT statement again, it continued displaying 24 rather than 25.
+
+Conclusion: PostgreSQL REPEATABLE READ ensures that repeated queries within the same transaction see a consistent snapshot of the database, even when another transaction commits changes.
