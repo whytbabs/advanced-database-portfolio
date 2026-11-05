@@ -1,0 +1,20 @@
+README
+
+
+ROLLBACK Demonstration
+
+Objective: To demonstrate how PostgreSQL reverses uncommitted database changes.
+
+Scenario: A product's inventory stock was reduced by 5 units within a transaction.
+
+SQL commands used:
+
+BEGIN to initiate the transaction.
+UPDATE to reduce product stock.
+ROLLBACK to reverse the update.
+SELECT to verify the final stock quantity.
+
+Result: The stock quantity remained unchanged after executing ROLLBACK.
+
+Conclusion: This demonstrates how PostgreSQL transactions protect data integrity by allowing uncommitted changes to be reversed.
+
