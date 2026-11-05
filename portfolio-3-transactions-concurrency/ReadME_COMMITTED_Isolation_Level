@@ -1,0 +1,16 @@
+ReadMe..Isolation
+
+READ COMMITTED Isolation Level
+
+Objective: To demonstrate how PostgreSQL READ COMMITTED isolation handles concurrent transactions.
+
+Scenario: Two database sessions accessed the same CampusCart product record.
+
+Session A: Started a READ COMMITTED transaction and retrieved the product stock.
+
+Session B: Updated the product stock by one unit and committed the transaction.
+
+Observation: When Session A executed the SELECT statement again, it displayed the updated stock quantity.
+
+Conclusion: PostgreSQL READ COMMITTED provides a fresh snapshot for each SQL statement. Consequently, a transaction can see changes committed by other transactions between its statements.
+
